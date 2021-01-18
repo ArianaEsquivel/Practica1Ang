@@ -9,7 +9,8 @@ export class Persona {
         this.edad = edad;
         this.sexo = sexo;
     }
-    public setNombre(nombre: string) {
+
+    /*public setNombre(nombre: string) {
         this.nombre = nombre; 
     }
     public getNombre() {
@@ -33,5 +34,6 @@ export class Persona {
     public getSexo() {
         return this.sexo;
     }
+    */
 }
 
