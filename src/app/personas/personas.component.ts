@@ -7,47 +7,10 @@ import { Persona } from '../../../Clases/persona';
   styleUrls: ['./personas.component.css']
 })
 export class PersonasComponent implements OnInit {
-  public index : number
-  nP = new Persona('Abdeel', 'Flores', 21, 'Femenino');
-  nombre : string
-  apellidos : string
-  edad : number
-  sexo : string
-  personas : Array<Persona> = [] 
+  @Input() persona : Persona
+  
   constructor() { }
   ngOnInit(): void {
-    this.personas = [
-      {
-      'nombre' : 'Ariana',
-      'apellidos' : 'Esquivel',
-      'edad' : 19,
-      'sexo' : 'Femenino'
-      },
-      {
-        'nombre' : 'Alex',
-        'apellidos' : 'Lozano',
-        'edad' : 18,
-        'sexo' : 'Masculino'
-      },
-      {
-        'nombre' : 'Jair',
-        'apellidos' : 'Martínez',
-        'edad' : 19,
-        'sexo' : 'Masculino'
-      },
-      {
-        'nombre' : 'Gustavo',
-        'apellidos' : 'Torres',
-        'edad' : 18,
-        'sexo' : 'Masculino'
-      },
-      {
-        'nombre' : 'Humberto',
-        'apellidos' : 'Canales',
-        'edad' : 20,
-        'sexo' : 'Masculino'
-      }
-      ]
   }
 
 }

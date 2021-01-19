@@ -1,5 +1,8 @@
-<h1>EL AMOR DE MI VIDA</h1>
-<h3>Nombre: {{persona.nombre}} {{persona.apellidos}} hermoso</h3>
-<h5>Edad: {{persona.edad}}</h5>
-<h5>Sexo: {{persona.sexo}}</h5>
-<app-personas></app-personas>
+<label><input name="lista_personas" type="checkbox" (click)="verLista()"/> Mostrar lista de personas</label>
+<div *ngIf = "mostList">
+<app-personas [persona] = 'persona' *ngFor = 'let persona of personas' (click)="verDetalles(persona)"></app-personas>
+<label><input name="detalles" type="checkbox" (click)="ocultarDetalles()"/> Mostrar detalles de personas</label>
+<div [ngStyle] = "{'visibility' : mostDet ? 'visible' : 'hidden'}">
+<app-detalles [persona] = 'personaM'></app-detalles>
+</div>
+</div>

@@ -1,10 +1,4 @@
-<label><input name="lista_personas" type="checkbox"/> Mostrar lista de personas</label>
-<div>
-    <h1>Los superconocidos</h1>
-    <div class="form-group" *ngFor= "let persona of personas">
-        <label><input name="obj" type="radio" value="{{personas.indexOf(persona)}}" [(ngModel)] = "index"/> {{persona.nombre}}</label>
-    </div>
+<div class="form-group">
+    <label><input  name="obj" type="radio" /> {{persona.nombre}} </label>
 </div>
-<div>
-    <h3>el valor es {{index}}</h3>
-</div>
+
